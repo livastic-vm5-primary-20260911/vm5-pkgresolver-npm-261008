@@ -1,0 +1,12 @@
+conflict_resolvers:
+  - package-manager: npm
+    directories:
+      - /
+queue_rules:
+  - name: default
+    batch_size: 2
+    batch_max_wait_time: 60 seconds
+    merge_method: merge-batch
+    queue_conditions: []
+    merge_conditions:
+      - check-success = vm5-pkgresolver-never-261008
